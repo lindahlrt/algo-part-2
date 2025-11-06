@@ -25,14 +25,14 @@
         Afficher le message
     </button>
 </div>
-<!-- On tente un commentaire -->
+<!-- JavaScript pour afficher Bonjour et son nom de famille -->
 <script type="text/javascript">
     function displayMessage() {
         let firstname = document.getElementById("firstname").value;
         let lastname = document.getElementById("lastname").value;
         let fullname = firstname + " " + lastname.toUpperCase();
         let message = "Bonjour " + fullname;
-
+        
         alert(message)
     }
 </script>
