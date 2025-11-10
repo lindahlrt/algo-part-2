@@ -62,14 +62,17 @@
 
 <script type="text/javascript">
     function doYouLikeIt() {
-        if (isSalty() == true) {
-            alert ("Hum la bonne sou-soupe salée !")
-        }
-        if (isSweet() == true) {
-            alert ("Hum la bonne sou-soupe sucrée !")
-        }
         if (isPoisoned() == true) {
             alert ("Game Over")
+        }
+        else if (isSweet() && isSalty()) {
+            alert ("Beurk... c'est pas bon !")
+        }
+        else if (isSweet() == true) {
+            alert ("Hum la bonne sou-soupe sucrée !")
+        }
+        else if (isSalty() == true) {
+            alert ("Hum la bonne sou-soupe salée !")
         }
         else { (false)
             alert ("Beurk... c'est pas bon !")
