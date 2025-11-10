@@ -42,7 +42,11 @@
     function cartValue() {
         let articles = document.getElementById("articles");
         let selectedArticle = articles.options[articles.selectedIndex].value;
+        let promotion = document.getElementById("promotion").value;
 
+        if (promotion === VALID_PROMOTION_CODE && selectedArticle === 'one') {
+            alert("La valeur de votre panier est de 27€")
+        }
         if (selectedArticle === 'one') {
          alert ("La valeur de votre panier est de 27€")
         }
@@ -51,6 +55,20 @@
             alert ("La valeur de votre panier est de 45€")
         }
     }
+
+
+    let price;
+
+    if (selectedArticle === 'one') {
+        price = 30;
+    } else {
+        price = 50
+    }
+
+    if (promotion === VALID_PROMOTION_CODE) {
+        price = price (price * 01)
+    }
+    alert ("La valeur de votre pannier est de " + price)
 </script>
 </body>
 </html>
