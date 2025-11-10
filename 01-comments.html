@@ -25,12 +25,17 @@
         Afficher le message
     </button>
 </div>
-<!-- JavaScript pour afficher Bonjour et son nom de famille -->
+        
 <script type="text/javascript">
     function displayMessage() {
         let firstname = document.getElementById("firstname").value;
         let lastname = document.getElementById("lastname").value;
+
+        /* on met le nom de famille en majuscule grâce à la méthode toUpperCase ()
+        * afin de respecter un standard de notre base de donnée */
+
         let fullname = firstname + " " + lastname.toUpperCase();
+        // Ne pas oublier l'espace si on souhaite bien afficher les deux mots non collés
         let message = "Bonjour " + fullname;
         
         alert(message)
