@@ -62,20 +62,37 @@
 
 <script type="text/javascript">
     function doYouLikeIt() {
-        // CODE HERE !
+        if (isSalty() == true) {
+            alert ("Hum la bonne sou-soupe salée !")
+        }
+        if (isSweet() == true) {
+            alert ("Hum la bonne sou-soupe sucrée !")
+        }
+        if (isPoisoned() == true) {
+            alert ("Game Over")
+        }
+        else { (false)
+            alert ("Beurk... c'est pas bon !")
+        }
     }
 
     function isSalty() {
         let carrots = document.getElementById("carrots").checked;
-        // CODE HERE !
+        let potatoes = document.getElementById("potatoes").checked;
+        let tomatoes = document.getElementById("tomatoes").checked;
+        return carrots || potatoes || tomatoes;
     }
 
     function isSweet() {
-        // CODE HERE !
+        let blackChocolate = document.getElementById("black-chocolate").checked;
+        let whiteChocolate = document.getElementById("white-chocolate").checked;
+        return blackChocolate || whiteChocolate;
     }
 
     function isPoisoned() {
-        // CODE HERE !
+        let cyanide = document.getElementById("cyanide").checked;
+        let vitriol = document.getElementById("vitriol").checked;
+        return cyanide || vitriol;
     }
 </script>
 </body>

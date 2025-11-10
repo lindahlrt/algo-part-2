@@ -35,22 +35,22 @@
 </div>
 
 <script type="text/javascript">
-    function primaryColors() {
+    function primaryColors() { 
         let colors = document.getElementById("colors");
         let secondaryColor = colors.options[colors.selectedIndex].value;
 
-        if (colors == 'green') {
+        if (secondaryColor === 'green') {
             alert('Le vert est composé de jaune et de bleu')
         }
 
-        if (colors == 'purple') {
+        if (secondaryColor === 'purple') {
             alert('Le violet est composé de bleu et de rouge')
         }
 
-        else (colors == 'orange') {
+        if (secondaryColor === 'orange') { 
             alert('Le orange est composé de jaune et de rouge')
         }
-    }
+    }    
 </script>
 </body>
 </html>
