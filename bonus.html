@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible">
+    <title>Exo bonus#01 - Email ?</title>
+    <link href="./bootstrap.min.css" rel="stylesheet" />
+    <link href="./style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="card">
+    <p class="h6 font-weight-bold text-center">Bonus#01 - Vous avez dit email ?</p>
+    <div class="instructions">
+        <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de vérifier que le champ saisi 
+            correspond bien à une adresse électronique</p>
+        <br />
+        <p class="text-secondary">On considère un email comme valide si il est de la forme : 
+            <pre>firstname.lastname@domain.ext</pre> avec :
+        <ul class="text-secondary">
+            <li><em>firstname</em> possiblement vide ; dans ce cas, le point séparant firstname de lastname ne doit pas exister>.</li>
+            <li><em>lastname</em> doit contenir au moins 3 caractères.</li>
+            <li><em>domain</em> doit contenir au moins 6 caractères et précédé de @.</li>
+            <li><em>ext</em> (extension) doit contenir de 2 à 4 caractères.</li>
+        </ul>
+        </p>
+        <br />
+        <p class="text-success">L'étude de l'objet JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String" target="_blank">String</a> 
+            et de ses méthodes, plus particulièrement la méthode <em>split(...)</em> 
+            (voire la méthode <em>match(...)</em> pour les plus téméraires) sera utile !
+        </p>
+    </div>
+
+    <br/>
+    <label for="mail">Adresse électronique</label>
+    <input type="text" id="mail" name="mail" placeholder="Votre adresse électronique">
+
+    <button type="button" class="btn btn-primary" onclick="checkEmail()">
+        Tester l'adresse électronique
+    </button>
+
+</div>
+
+<script type="text/javascript">
+
+    function checkEmail() {
+        const email = "firstname.lastname@domain.ext";
+
+        // split l'email à partir du @
+        const mail = email.split("@");
+        console.log(mail[0]);
+
+        // split const mail [0] à partir du point 
+        const firstnameLastname = mail[0].split(".");
+        console.log(firstnameLastname[0]);
+
+        let firstname = firstnameLastname[0]; //on récupère firstname
+        let lastname = firstnameLastname[1];  //on récupère lastname
+
+        // split const mail [1] à partir du point
+        const domainExt= mail[1].split(".");
+        console.log(domainExt[0]);
+
+        let domain = domainExt[0];    //on récupère domain
+        let ext = domainExt[1];       //on récupère ext
+
+    }
+
+</script>
+</body>
+</html>
