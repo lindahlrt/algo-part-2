@@ -16,7 +16,7 @@
     <div class="instructions">
         <p class="text-secondary">Votre mission si toutefois vous l'acceptez, est de faire un convertisseur EUR/USD en partant de presque rien !</p>
         <br />
-        <p class="text-secondary">Si je rentre <i class="text-dark">10 Euros</i> mon programme retourne <i class="text-dark">10 Euros -> 10.79 Dollars</i></p>
+        <p class="text-secondary">Si je rentre <i class="text-dark">10 Euros</i> mon programme retourne <i class="text-dark">10 Euros -> 10.73 Dollars</i></p>
         <p class="text-secondary">Si je rentre <i class="text-dark">10 Dollars</i> mon programme retourne <i class="text-dark">10 Dollars -> 9.32 Euros</i></p>
         <p class="text-secondary">La valeur doit-être arrondi à deux chiffres après la virgule</p>
     </div>
@@ -31,17 +31,26 @@
     </select>
 
     <br/>
-    <button type="button" class="btn btn-primary">
+    <button type="button" class="btn btn-primary" onclick="converted()">
         Connaître la valeur en USD->EUR ou EUR->USD
     </button>
 </div>
 
 <script type="text/javascript">
     function converted(){
-        if ()
+        let usd = 1.0729;
+        let value = document.getElementById("value").value;
+        let currencies = document.getElementById("currencies");
+        let selectedcurrency = currencies.options[currencies.selectedIndex].value;
+
+        let result;
+        if ( selectedcurrency === "eur") {
+            alert(result = value * usd);
+    } 
+        else if (selectedcurrency === "usd") {
+            alert(result = value / usd);
     }
-    // 1 EUR = 1.0729 USD
-    // CODE HERE !
+}
 </script>
 </body>
 </html>
